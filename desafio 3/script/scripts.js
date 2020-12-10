@@ -1,6 +1,5 @@
-decada();
-
-function decada() {
+dias();
+function dias() {
 
     let dias = ["Lunes", "Martes", "Miercoles","Jueves", "Viernes", "Sábado","Domingo"];
     for(let i=0; i< dias.length;i++){
