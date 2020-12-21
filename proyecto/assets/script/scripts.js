@@ -5,39 +5,26 @@ function costos() {
     const cuotas = Number(prompt("cantidad de cuotas del 2 al 5"));
     switch (cuotas) {
         case 3:
-            costo = monto *(1.24*cuotas);
+            costo = monto *(1.024*cuotas);
             alert("Usted pagaria "+cuotas+ " de " +costo+ " Pesos. ");
             break;
         case 4:
-            costo = monto *(1.24*cuotas);
+            costo = monto *(1.024*cuotas);
             alert("Usted pagaria "+cuotas+ " de " +costo+ " Pesos. ");
             break;
         case 5:
-            costo = monto *(1.24*cuotas);
+            costo = monto *(1.024*cuotas);
             alert("Usted pagaria "+cuotas+ " de " +costo+ " Pesos. ");
             break;
         case 6:
-            costo = monto *(1.24*cuotas);
+            costo = monto *(1.024*cuotas);
             alert("Usted pagaria "+cuotas+ " de " +costo+ " Pesos. ");
             break;
         default:
-            alert("Debe colocar de 3 a 6 cuotas");
+            alert("Debe colocar un numero de cuotas entre 3 a 6");
             break;
     }
 
-}
-
-let plan = {
-	nombre: "cuoti4",
-	limite: 10000,
-	cuotas: 4,
-	tasa: 0.27,
-	vencimiento: 15,
-
-	mostrarInfo: function () {
-		// console.log(this)
-		console.log(`Este producto es: ${this.nombre} y tiene un precio de $${this.limite}`);
-    }   
 }
 const planes = [];
 
