@@ -1,6 +1,6 @@
 
 
-function costos() {
+/* function costos() {
     let monto = Number(prompt("Que monto quiere solicitar"));
     const cuotas = Number(prompt("cantidad de cuotas del 2 al 5"));
     switch (cuotas) {
@@ -24,8 +24,9 @@ function costos() {
             alert("Debe colocar un numero de cuotas entre 3 a 6");
             break;
     }
+    }
+ */
 
-}
 const planes = [];
 
 function Plan(nombre, limite, cuotas, tasa, vencimiento) {
@@ -53,4 +54,3 @@ function Plan(nombre, limite, cuotas, tasa, vencimiento) {
 console.table(planes);
 
 
-costos();
