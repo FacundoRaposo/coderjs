@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAMA,AAAA,IAAI,CAAA;EACA,gBAAgB,EAJb,OAAO;CAKb;;AACD,AAEI,QAFI,CAEJ,EAAE,CAAA;EACE,UAAU,EAAE,MAAM;CACrB;;AAEL,AAAA,WAAW,CAAA;EACP,WAAW,EAAE,MAAM;EACnB,QAAQ,EAAE,MAAM;EAChB,KAAK,EAAE,KAAK;CACf;;AAED,AAAA,aAAa,CAAA;EACT,gBAAgB,EApBb,OAAO;EAqBV,KAAK,EAAE,KAAK;CACf",
+    "sources": [
+        "styling.scss"
+    ],
+    "names": [],
+    "file": "styling.css"
+}

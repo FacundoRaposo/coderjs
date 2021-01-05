@@ -55,4 +55,7 @@ function Plan(nombre, limite, cuotas, tasa, vencimiento) {
 const plan2 = new Plan("cuoti3",5000,3,0.15,15);
 
 plan2.mostrarPlanes();
+
+
+plan();
 costos();

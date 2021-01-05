@@ -1,0 +1,25 @@
+
+$red: #7c0d0d;
+$blue: #0074d9;
+$green:#3cc94b;
+
+
+body{
+    background-color: $green;
+};
+#landing{
+
+    h1{
+        text-align: center;
+    }
+}
+.selectPlan{
+    align-items: center;
+    overflow: hidden;
+    color: White;
+}
+
+#botonCotizar{
+    background-color: $blue;
+    color: white;
+}
