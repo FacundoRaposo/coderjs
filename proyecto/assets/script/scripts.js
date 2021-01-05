@@ -1,9 +1,8 @@
 const planes = [];
-const monto = this.montoCapital;
+const monto = this.montoCap;
 
-
-function costos(monto) {
-    switch (cuotas) {
+function costos(monto,getSelectedValue) {
+    switch (getSelectedValue) {
         case 3:
             costo = monto *(1.024*cuotas);
             alert("Usted pagaria "+cuotas+ " de " +costo+ " Pesos. ");
@@ -75,16 +74,21 @@ function addOptions(domElement, array){
     for (value in array){
         let plan = array[value];
         let planName = plan.nombre;
+        let planCuota = plan.cuotas;
         console.log(planName);
         let option = document.createElement("option");
-        option.text = planName;
+        option.text = planName  + " en " + planCuota + " cuotas";
         select.add(option);
     }
 }
 
 function getSelectedValue(){
     let selectedValue = document.getElementById("list").value;
-    console.log(selectedValue)
+    let Arrcuotas = selectedValue.split(" ");
+    let cuotas = Arrcuotas[2];
+    console.log(cuotas);
+    
+    return cuotas;
 
 }
 
