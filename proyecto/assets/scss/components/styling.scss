@@ -9,17 +9,25 @@ body{
 };
 #landing{
 
-    h1{
+    h1,h2{
         text-align: center;
     }
+    
 }
 .selectPlan{
     align-items: center;
     overflow: hidden;
-    color: White;
+    color: rgb(68, 26, 26);
 }
 
 #botonCotizar{
     background-color: $blue;
     color: white;
+}
+
+#resultado{
+    color: $red;
+    text-align: center;
+    font-size: 80px;
+    font-weight: 400;
 }

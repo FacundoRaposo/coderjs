@@ -2,7 +2,7 @@ body {
   background-color: #3cc94b;
 }
 
-#landing h1 {
+#landing h1, #landing h2 {
   text-align: center;
 }
 
@@ -11,13 +11,18 @@ body {
       -ms-flex-align: center;
           align-items: center;
   overflow: hidden;
-  color: White;
+  color: #441a1a;
 }
 
-/*#botonCotizar {
+#botonCotizar {
   background-color: #0074d9;
   color: white;
-}*/
+}
 
-
+#resultado {
+  color: #7c0d0d;
+  text-align: center;
+  font-size: 80px;
+  font-weight: 400;
+}
 /*# sourceMappingURL=styling.css.map */

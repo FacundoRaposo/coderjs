@@ -1,24 +1,23 @@
 const planes = [];
 
 window.onload = function(){
-    const botonCoti = document.getElementById('botonCotizar');
-    botonCoti.addEventListener("click",function(event){
+    $("#botonCotizar").click(function(){
         resultadoFinal();
     })
+
 }
 
 
 
 /* Calculo cuotas*/
 
-function costos() {
+function costos(cuotas) {
     const monto = document.getElementById("montoCap").value;
-    let cuotas = this.getSelectedValue();
-    console.log(cuotas);
+
     console.log(monto);
     switch (cuotas) {
         case 3:
-            costo = monto *(1.024*cuotas);
+            costo = monto *(1.024*get);
             return("Usted pagaria "+cuotas+ " de " +costo+ " Pesos. ");
             break;
         case 4:
@@ -46,7 +45,7 @@ function addOptions(domElement, array){
         let plan = array[value];
         let planName = plan.nombre;
         let planCuota = plan.cuotas;
-        //console.log(planName);
+        console.log(planName);
         let option = document.createElement("option");
         option.text = planName  + " en " + planCuota + " cuotas";
         select.add(option);
@@ -56,10 +55,14 @@ function addOptions(domElement, array){
 function getSelectedValue(){
     let selectedValue = document.getElementById("list").value;
     let Arrcuotas = selectedValue.split(" ");
-    var cuotas = Arrcuotas[2];
-
+    let cuotas = Arrcuotas[2];
     console.log(cuotas);
-    return cuotas;
+
+    let resultado = this.costos(cuotas);
+    console.log(resultado);
+    return resultado;
+
+
 }
 
 /* Respuesta */
@@ -67,7 +70,7 @@ function getSelectedValue(){
 function resultadoFinal(){
 let contenedor = document.createElement("div");
 contenedor.setAttribute("class","result");
-contenedor.innerHTML = `<span>${costos()}</span>`;
+contenedor.innerHTML = `<span>${getSelectedValue()}</span>`;
 document.getElementById("resultado").appendChild(contenedor);
 
 }
@@ -96,11 +99,15 @@ planes.push(plan2);
 planes.push(plan3);
 planes.push(plan4);
 
+
+
+
+
+
 /* Titulo principal */
 const divLanding = document.querySelector('#landing');
 const tituloPrincipal = document.createElement('h1');
 
-//divLanding.insertBefore(tituloPrincipal,referencia);
 
 tituloPrincipal.classList.add('mx-12', 'py-2');
 
