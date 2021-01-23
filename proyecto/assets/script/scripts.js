@@ -1,5 +1,5 @@
 const planes = [];
-
+let planSelected = "";
 window.onload = function(){
     $("#botonCotizar").click(function(){
         resultadoFinal();
@@ -14,23 +14,28 @@ window.onload = function(){
 function costos(cuotas) {
     const monto = document.getElementById("montoCap").value;
 
-    console.log(monto);
+    console.log("este monto: " + monto);
+    console.log("estas cuotas: " + cuotas)
     switch (cuotas) {
         case 3:
-            costo = monto *(1.024*get);
-            return("Usted pagaria "+cuotas+ " de " +costo+ " Pesos. ");
-            break;
+            costo = monto *(1.024*cuotas);
+            answer = "Usted pagaria "+cuotas+ " de " +costo+ " Pesos. "
+            return(answer);
+            
         case 4:
             costo = monto *(1.024*cuotas);
-            return("Usted pagaria "+cuotas+ " de " +costo+ " Pesos. ");
+            answer = "Usted pagaria "+cuotas+ " de " +costo+ " Pesos. "
+            return(answer);
             
         case 5:
             costo = monto *(1.024*cuotas);
-            return("Usted pagaria "+cuotas+ " de " +costo+ " Pesos. ");
+            answer = "Usted pagaria "+cuotas+ " de " +costo+ " Pesos. "
+            return(answer);
             
         case 6:
             costo = monto *(1.024*cuotas);
-            return("Usted pagaria "+cuotas+ " de " +costo+ " Pesos. ");
+            answer = "Usted pagaria "+cuotas+ " de " +costo+ " Pesos. "
+            return(answer);
             
         default:
             return("Debe colocar un numero de cuotas entre 3 a 6");
@@ -53,25 +58,31 @@ function addOptions(domElement, array){
 }
 
 function getSelectedValue(){
+
     let selectedValue = document.getElementById("list").value;
     let Arrcuotas = selectedValue.split(" ");
     let cuotas = Arrcuotas[2];
     console.log(cuotas);
 
     let resultado = this.costos(cuotas);
-    console.log(resultado);
-    return resultado;
+    
+    planSelected = resultado;
+    
+    return planSelected;
 
 
 }
 
+
 /* Respuesta */
+
+console.log("previo a mostrar el resultado es" + planSelected);
 
 function resultadoFinal(){
 let contenedor = document.createElement("div");
 contenedor.setAttribute("class","result");
 contenedor.innerHTML = `<span>${getSelectedValue()}</span>`;
-document.getElementById("resultado").appendChild(contenedor);
+document.getElementById("Resultado").appendChild(contenedor);
 
 }
 function Plan(nombre, limite, cuotas, tasa, vencimiento) {
