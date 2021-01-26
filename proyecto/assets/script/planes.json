@@ -1,0 +1,29 @@
+{
+    "arrayPlanes":[{
+      "nombre":"Plan1",
+      "limite":"10000",
+      "cuotas":3,
+      "tasa":0.24,
+      "vencimiento":10
+  },
+  {
+    "nombre":"Plan2",
+    "limite":"10000",
+    "cuotas":4,
+    "tasa":0.24,
+    "vencimiento":10
+},{
+  "nombre":"Plan3",
+  "limite":"10000",
+  "cuotas":5,
+  "tasa":0.24,
+  "vencimiento":10
+},{
+  "nombre":"Plan4",
+  "limite":"10000",
+  "cuotas":6,
+  "tasa":0.24,
+  "vencimiento":10
+}
+]
+}

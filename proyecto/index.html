@@ -12,24 +12,24 @@
     <body>
         <main>
             <section id="landing">
-                <div class="container-fluid heading" >
+                <div class="col-xl-12 col-md-6 heading" >
 
                     <h1>Bienvenidos a Oportunya</h1>
                     <h2>Un crédito pensado para vos</h2>
                     
                 </div>
 
-                <div class="container-fluid getCapital">
+                <div class="col-xl-12 col-md-6 getCapital">
                     <input id="montoCap" type="text" class="form-control input-group-text" placeholder="Monto a pedir">
    
                 </div>
-                <div class="container-fluid selectPlan">
+                <div class="col-xl-12 col-md-6 selectPlan">
                     <select class="form-control" name="planes" id="list" onChange="getSelectedValue();">
                         <option>seleccione el plan...</option>
                     </select>
                     <button id="botonCotizar" type="button" class="btn btn-success btn-lg btn-block">Cotizar</button>
                 </div>
-                <div id = "resultado" class="container-fluid">
+                <div id="resultado" class="container-fluid">
 
                 </div>
             </section>
@@ -39,10 +39,11 @@
 
 
 
-        <script src="./assets/script/scripts.js"> </script>
-        <script src="./assets/script/dom.js"> </script>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+       <script src="./assets/script/jquery.js"></script>
+        <script src="./assets/script/scripts.js"> </script>
+        <script src="./assets/script/dom.js"> </script>      
     </body>
 </html>

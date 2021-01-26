@@ -1,4 +1,4 @@
-const planes = [];
+let planes = [];
 let planSelected = "";
 window.onload = function(){
     $("#botonCotizar").click(function(){
@@ -7,7 +7,25 @@ window.onload = function(){
 
 }
 
+$(function() {
+    document.addEventListener('DOMContentLoaded', ()=> {
+        console.log("DOMContentLoaded desde Jquery");
+    })
 
+    
+    $.ajax({
+        url: "./assets/script/planes.json",
+        success: function(data){
+            addOptions("planes",data.arrayPlanes);
+            console.log("peticion exitosa");
+
+        },
+        error: function(){
+    
+        }
+      });
+
+})
 
 /* Calculo cuotas*/
 
@@ -16,30 +34,25 @@ function costos(cuotas) {
 
     console.log("este monto: " + monto);
     console.log("estas cuotas: " + cuotas)
-    switch (cuotas) {
-        case 3:
-            costo = monto *(1.024*cuotas);
-            answer = "Usted pagaria "+cuotas+ " de " +costo+ " Pesos. "
+    if(cuotas == 3) { 
+        costo = ((monto *1.024)/cuotas);
+        answer = "Usted pagaria "+cuotas+ " cuotas de " +costo+ " Pesos. "
+        return(answer);}else if(cuotas == 4){
+            costo = ((monto *1.024)/cuotas);
+            answer = "Usted pagaria "+cuotas+ " cuotas de " +costo+ " Pesos. "
             return(answer);
             
-        case 4:
-            costo = monto *(1.024*cuotas);
-            answer = "Usted pagaria "+cuotas+ " de " +costo+ " Pesos. "
+        }else if(cuotas == 5) {
+            costo = ((monto *1.024)/cuotas);
+            answer = "Usted pagaria "+cuotas+ " cuotas de " +costo+ " Pesos. "
             return(answer);
-            
-        case 5:
-            costo = monto *(1.024*cuotas);
-            answer = "Usted pagaria "+cuotas+ " de " +costo+ " Pesos. "
+
+        }else{
+            costo = ((monto *1.024)/cuotas);
+            answer = "Usted pagaria "+cuotas+ " cuotas de " +costo+ " Pesos. "
             return(answer);
-            
-        case 6:
-            costo = monto *(1.024*cuotas);
-            answer = "Usted pagaria "+cuotas+ " de " +costo+ " Pesos. "
-            return(answer);
-            
-        default:
-            return("Debe colocar un numero de cuotas entre 3 a 6");
-    }
+        }
+        
 }
 
 /* select */
@@ -82,49 +95,5 @@ function resultadoFinal(){
 let contenedor = document.createElement("div");
 contenedor.setAttribute("class","result");
 contenedor.innerHTML = `<span>${getSelectedValue()}</span>`;
-document.getElementById("Resultado").appendChild(contenedor);
-
+document.getElementById("resultado").appendChild(contenedor);
 }
-function Plan(nombre, limite, cuotas, tasa, vencimiento) {
-	this.nombre = nombre;
-	this.limite = limite;
-	this.cuotas = cuotas;
-	this.tasa = tasa;
-	this.vencimiento = vencimiento;
-    
-
-   
-}
-
-this.mostrarPlanes = function () {
-		console.log(`Este plan es el: ${this.nombre} y tiene una tasa de ${this.tasa} , a pagar en ${this.cuotas} que vencen el dia ${this.vencimiento} de cada mes`);
-}
-
-const plan1 = new Plan ('Plan1', 10000,3,0.15,10);
-const plan2 = new Plan ('Plan2', 12000,4,0.15,10);
-const plan3 = new Plan ('Plan3', 13000,5,0.15,10);
-const plan4 = new Plan ('Plan4', 14000,6,0.15,10);
-    
-planes.push(plan1);
-planes.push(plan2);
-planes.push(plan3);
-planes.push(plan4);
-
-
-
-
-
-
-/* Titulo principal */
-const divLanding = document.querySelector('#landing');
-const tituloPrincipal = document.createElement('h1');
-
-
-tituloPrincipal.classList.add('mx-12', 'py-2');
-
-tituloPrincipal.textContent= 'Oportunya Créditos pensados para vos';
-
-
-
-
-this.addOptions("planes", planes);
