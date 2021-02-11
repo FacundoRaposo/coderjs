@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <title>Oportunya</title>
 
 
@@ -12,26 +12,36 @@
     <body>
         <main>
             <section id="landing">
-                <div class="col-xl-12 col-md-6 heading" >
+                <div class="col-xl-12 col-sm-6 heading" >
 
                     <h1>Bienvenidos a Oportunya</h1>
                     <h2>Un crédito pensado para vos</h2>
                     
                 </div>
+                <div class="row cotizador"> 
+                        <div class="col-xl-6 col-sm-12">
+                            <div class="container-fluid getCapital">
+                                <input id="montoCap" type="text" class="form-control input-group-text" placeholder="Que monto queres llevar?">
+                            </div>
+                            <div class="container-fluid selectPlan">
+                                <select class="form-control" name="planes" id="list" onChange="getSelectedValue();">
+                                    <option>seleccione el plan...</option>
+                                </select>
+                            </div>    
+                            <div class="container-fluid">
+                                <button id="botonCotizar" type="button" class="btn btn-success btn-lg btn-block">Cotizar</button>
+                            </div>    
+                        </div>   
+                        
+                        <div class="card text-center text-white bg-success mb-3 result" style="max-width: 18rem;">
+                            <div id="resultado">
+                            
+                            
+                            </div>
+                        </div>
+                </div>
 
-                <div class="col-xl-12 col-md-6 getCapital">
-                    <input id="montoCap" type="text" class="form-control input-group-text" placeholder="Monto a pedir">
-   
-                </div>
-                <div class="col-xl-12 col-md-6 selectPlan">
-                    <select class="form-control" name="planes" id="list" onChange="getSelectedValue();">
-                        <option>seleccione el plan...</option>
-                    </select>
-                    <button id="botonCotizar" type="button" class="btn btn-success btn-lg btn-block">Cotizar</button>
-                </div>
-                <div id="resultado" class="container-fluid">
-
-                </div>
+            </div>
             </section>
         </main>
 

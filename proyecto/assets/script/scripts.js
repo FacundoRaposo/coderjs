@@ -2,6 +2,7 @@ let planes = [];
 let planSelected = "";
 window.onload = function(){
     $("#botonCotizar").click(function(){
+        borrarInfo();
         resultadoFinal();
     })
 
@@ -90,10 +91,15 @@ function getSelectedValue(){
 /* Respuesta */
 
 console.log("previo a mostrar el resultado es" + planSelected);
+function borrarInfo(){
+
+}
 
 function resultadoFinal(){
-let contenedor = document.createElement("div");
-contenedor.setAttribute("class","result");
-contenedor.innerHTML = `<span>${getSelectedValue()}</span>`;
-document.getElementById("resultado").appendChild(contenedor);
+document.getElementById('resultado').innerHTML = `<span></span> 
+<div class="card-body">
+  <h5 class="card-title">${getSelectedValue()}</h5>
+  <p class="card-text">Para solicitarlo presione el siguiente boton</p>
+  <a href="#" class="btn btn-primary">Solicitar</a> 
+</div>`  ;
 }

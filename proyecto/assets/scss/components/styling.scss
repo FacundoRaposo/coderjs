@@ -1,18 +1,25 @@
 
 $red: #7c0d0d;
 $blue: #0074d9;
-$green:#3cc94b;
-
+$green:#009d4d;
 
 body{
-    background-color: $green;
+    height: 100%;
+    background-image: url(/proyecto/assets/img/Oportunya_placas-03.png);
+    background-size: cover;
 };
+
+.cotizador{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .heading{
     h1 {
         text-align: center;
         font-weight: 400;
-        font-size: 6rem;
+        font-size: 5rem;
         }
     h2 {
         text-align: center;
@@ -22,9 +29,8 @@ body{
 }
 
 .selectPlan{
-    align-items: center;
     overflow: hidden;
-    color: rgb(68, 26, 26);
+    flex-wrap: wrap;
 }
 
 #botonCotizar{
@@ -33,9 +39,13 @@ body{
 }
 
 #resultado{
-    color: $red;
-    text-align: center;
-    font-size: 80px;
-    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.result{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
